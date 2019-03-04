@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>demo-web-app</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.html</location>
+  </error-page>
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>com.lti.servlet.HelloServlet</servlet-class>
+    <load-on-startup>100</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello.exe </url-pattern>
+    <url-pattern>/hi.exe </url-pattern>
+    <url-pattern>/welcome.exe</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TatkalBookingServlet</display-name>
+    <servlet-name>TatkalBookingServlet</servlet-name>
+    <servlet-class>com.lti.servlet.TatkalBookingServlet</servlet-class>
+    <init-param>
+    <param-name>startTime</param-name>
+    <param-value>10</param-value>
+    </init-param>
+    <init-param>
+    <param-name>endTime</param-name>
+    <param-value>13</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TatkalBookingServlet</servlet-name>
+    <url-pattern>/TatkalBookingServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
